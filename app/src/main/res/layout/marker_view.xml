@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="left"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="6dp"
+    android:paddingBottom="20dp"
+    android:paddingHorizontal="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<!--  android:background="@drawable/ic_baseline_chat_bubble_24"  -->
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_marker"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="7dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_marker_time"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="7dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

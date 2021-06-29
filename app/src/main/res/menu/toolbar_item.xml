@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/toolbar_save" android:title="파일 저장" android:icon="@drawable/ic_save_w"/>
+    <item android:id="@+id/toolbar_delete" android:title="데이터 삭제" android:icon="@drawable/ic_delete_w"/>
+<!--    <item android:id="@+id/testBeaconSelect" android:title="테스트비콘 선택"/>-->
+    <item android:id="@+id/option_set" android:title="옵션 설정"/>
+<!--    <item android:id="@+id/onBtn" android:title="시작"/>-->
+<!--    <item android:id="@+id/offBtn" android:title="종료"/>-->
+</menu>

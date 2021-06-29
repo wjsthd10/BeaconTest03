@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionList">
+    
+<!--    스캔속도, 데이터 저장타입, 스캔 필터기능[mac주소]    -->
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/option_toolbar"
+        app:titleTextColor="@color/white"
+        app:title="옵션 설정"
+        android:elevation="8dp"
+        app:menu="@menu/option_save_button_meun"
+        android:background="@color/kidsLoveColor"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/option_0"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/option_scan_speed"
+                    android:text="스캔 속도"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/option_background_style"
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <LinearLayout
+                    android:id="@+id/sOption_visible_lay"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/speed_00"
+                        android:clickable="true"
+                        android:onClick="itemClicked"
+                        android:background="@drawable/item_background_type01"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/btn_speed_00"
+                            android:src="@drawable/ic_radio_unchecked"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="느린 스캔 속도"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/speed_01"
+                        android:clickable="true"
+                        android:onClick="itemClicked"
+                        android:background="@drawable/item_background_type01"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/btn_speed_01"
+                            android:src="@drawable/ic_radio_unchecked"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="중간 스캔 속도"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/speed_02"
+                        android:clickable="true"
+                        android:onClick="itemClicked"
+                        android:background="@drawable/item_background_type01"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/btn_speed_02"
+                            android:src="@drawable/ic_radio_unchecked"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="빠른 스캔 속도"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:id="@+id/option_0_visible"
+                app:layout_constraintTop_toTopOf="@id/option_0"
+                app:layout_constraintRight_toRightOf="@id/option_0"
+                android:clickable="true"
+                android:onClick="listVisibleBtn"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_up_b"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+<!--            옵션0번 끝 == 스캔 속도 옵션              -->
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/option_1"
+                app:layout_constraintTop_toBottomOf="@id/option_0"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/option_save_type"
+                    android:text="파일 기본 저장 타입"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/option_background_style"
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <LinearLayout
+                    android:id="@+id/tOption_visible_lay"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/type_00"
+                        android:clickable="true"
+                        android:onClick="itemClicked"
+                        android:background="@drawable/item_background_type01"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/btn_type_00"
+                            android:src="@drawable/ic_radio_unchecked"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text=".CSV 파일로 저장"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/type_01"
+                        android:clickable="true"
+                        android:onClick="itemClicked"
+                        android:background="@drawable/item_background_type01"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/btn_type_01"
+                            android:src="@drawable/ic_radio_unchecked"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text=".JSON 파일로 저장"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:id="@+id/option_1_visible"
+                app:layout_constraintTop_toTopOf="@id/option_1"
+                app:layout_constraintRight_toRightOf="@id/option_1"
+                android:clickable="true"
+                android:onClick="listVisibleBtn"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_up_b"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <!--            옵션0번 끝 == 스캔 속도 옵션              -->
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

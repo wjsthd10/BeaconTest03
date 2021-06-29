@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">키즈사랑 비콘</string>
+
+    <string name="option_data">option_data</string>
+    <string name="scan_speed">SCAN_SPEED</string>
+    <string name="save_type_set">SAVE_TYPE_SET</string>
+
+</resources>

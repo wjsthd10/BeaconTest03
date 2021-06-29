@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeaconDataShow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:elevation="16dp"
+        android:background="@color/kidsLoveColor"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:menu="@menu/toolbar_item"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/scanTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/title"
+            android:paddingVertical="5dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+        <LinearLayout
+            android:id="@+id/edit_lay"
+            android:elevation="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/title"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/edit_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/mac01"
+                android:textSize="12sp"
+                android:ellipsize="end"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:nextFocusDown="@id/mac02"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+            <TextView
+                android:text=":"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mac02"
+                android:textSize="12sp"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:nextFocusDown="@id/mac03"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mac03"
+                android:textSize="12sp"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:nextFocusDown="@id/mac04"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mac04"
+                android:textSize="12sp"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:nextFocusDown="@id/mac05"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mac05"
+                android:textSize="12sp"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:nextFocusDown="@id/mac06"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mac06"
+                android:maxEms="2"
+                android:maxLength="2"
+                android:textSize="12sp"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/save_textFile"
+            android:visibility="gone"
+            android:clickable="true"
+            android:onClick="saveTextFile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/sql_delete"
+            android:padding="8dp"
+            android:src="@drawable/ic_save_w"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/sql_delete"
+            android:visibility="gone"
+            android:clickable="true"
+            android:onClick="sqlSaveDataDeleteAll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/search_icon"
+            android:padding="8dp"
+            android:src="@drawable/ic_delete_w"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/select_cancel_btn"
+            android:clickable="true"
+            android:onClick="selectCancelAll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/search_icon"
+            android:padding="7dp"
+            android:src="@drawable/ic_select_cancel_w_02"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:onClick="searchBtn"
+            android:src="@drawable/ic_search_w"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/show_progressbar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/show_progressbar"
+            android:indeterminateTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/nullView"
+            android:padding="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <View
+            android:id="@+id/nullView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/deviceDataList"
+                android:scrollbars="vertical"
+                android:background="@color/backColor"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/open_beacon_chart"
+                android:layout_margin="8dp"
+                android:onClick="openBeaconChart"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_graph_b"
+                android:visibility="visible"
+                app:fabSize="mini"
+                android:elevation="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:elevation="16dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <Button
+                android:text="스캔 중지"
+                android:textStyle="bold"
+                android:backgroundTint="@color/kidsLoveColor"
+                android:onClick="scanBeacon_BTN"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="스캔 시작"
+                android:textStyle="bold"
+                android:backgroundTint="@color/kidsLoveColor"
+                android:onClick="RestartScan"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/select_data_save_button"
+                android:text="데이터 저장"
+                android:textStyle="bold"
+                android:backgroundTint="@color/kidsLoveColor"
+                android:onClick="startSave"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

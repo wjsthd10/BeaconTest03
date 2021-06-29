@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataListShow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/renewBtn"
+            android:clickable="true"
+            android:onClick="reSetData"
+            android:src="@drawable/ic_paused"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="8dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:src="@drawable/ic_save_alt"
+            android:padding="8dp"
+            android:clickable="true"
+            android:onClick="selectSaveBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/renewBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mac_title"
+                android:gravity="center_vertical"
+                android:text="RSSI"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:id="@+id/line_color"
+                android:layout_width="30dp"
+                android:layout_height="2dp"/>
+
+            <ImageView
+                android:id="@+id/next_mac_btn"
+                android:clickable="true"
+                android:onClick="nextMacBtn"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/beaconDataChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
+
+<!--그레프 보여주는 레이아웃-->

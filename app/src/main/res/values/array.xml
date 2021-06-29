@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner">
+        <item>전체 비콘</item>
+        <item>선택 비콘</item>
+        <item>PB100</item>
+        <item>PB100M</item>
+        <item>pBeacon</item>
+        <item>pBeacon_n</item>
+    </string-array>
+
+    <string-array name="scanSpeedList">
+        <item>빠른 스캔 속도</item>
+<!--        SCAN_MODE_LOW_LATENCY  -->
+        <item>중간 스캔 속도</item>
+<!--        SCAN_MODE_BALANCED-->
+        <item>느린 스캔 속도</item>
+<!--        SCAN_MODE_LOW_POWER-->
+    </string-array>
+</resources>
